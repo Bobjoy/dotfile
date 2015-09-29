@@ -1,0 +1,34 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[alias]
+	st = status
+	rb = svn rebase
+	ci = commit -a
+	co = checkout
+	br = branch
+	lol = log --pretty=online --abbrev-commit --graph --decorate
+
+[push]
+	default = matching
+	
+[receive]
+	denyCurrentBranch = ignore
+
+[user]
+	name = bobjoy
+	email = bobjoy1010@163.com	
+
+[core]
+	excludesfile = /Users/vetech/.gitignore_global
+	autocrlf = false
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
