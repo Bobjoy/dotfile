@@ -25,6 +25,7 @@ fi
 
 # Set JAVA_HOME
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 export GVM_HOME="$HOME/.gvm"
@@ -35,6 +36,7 @@ export RVM_HOME="$HOME/.rvm"
 [[ -s "$RVM_HOME/scripts/rvm" ]] && source "$RVM_HOME/scripts/rvm"
 
 # This loads nvm
+export NVM_NODEJS_OGR_MIRROR=http://nodejs.org/dist
 export NVM_HOME="$HOME/.nvm"
 [ -s "$NVM_HOME/nvm.sh" ] && . "$NVM_HOME/nvm.sh"
 
@@ -42,19 +44,19 @@ export NVM_HOME="$HOME/.nvm"
 [[ -s "$HOME/.autojump/etc/profile.d/autojump.sh" ]] && source "$HOME/.autojump/etc/profile.d/autojump.sh"
 
 # Pythen version manager
-#export PYENV_ROOT="$HOME/.pyenv"
-
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 export DOXYGEN="/Applications/Doxygen.app/Contents/Resources"
+export APM_DIR="/Applications/Atom.app/Contents/Resources/app/apm"
 
-#export APM_DIR="/Applications/Atom.app/Contents/Resources/app/apm"
-
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+# Homebrew
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export LD_LIBRARY="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 
 export PATH=$JAVA_HOME/bin:$DOXYGEN:/opt/local/bin:/opt/local/sbin:$PATH
 
