@@ -68,7 +68,7 @@ export PATH="$PHANTOM_DIR/bin:$PATH"
 
 # npm environment
 export NPM_DIR="$HOME/npm"
-export PATH="NPM_DIR/bin:$PATH"
+export PATH="$NPM_DIR/bin:$PATH"
 
 
 # autojump plugin
